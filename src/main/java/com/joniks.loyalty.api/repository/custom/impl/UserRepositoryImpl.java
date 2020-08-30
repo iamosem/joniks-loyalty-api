@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.repository.custom.impl;
+package com.joniks.loyalty.api.repository.custom.impl;
 
 import java.util.List;
 
@@ -11,9 +11,9 @@ import org.hibernate.type.LongType;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.joniks.lotalty.api.entity.User;
-import com.joniks.lotalty.api.repository.custom.UserRepositoryCustom;
-import com.joniks.lotalty.api.utility.StringUtility;
+import com.joniks.loyalty.api.entity.User;
+import com.joniks.loyalty.api.repository.custom.UserRepositoryCustom;
+import com.joniks.loyalty.api.utility.StringUtility;
 
 @Repository("userRepositoryCustom")
 @Transactional(readOnly = true)

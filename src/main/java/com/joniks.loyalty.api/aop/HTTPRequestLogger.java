@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.aop;
+package com.joniks.loyalty.api.aop;
 
 import java.util.Date;
 import java.util.Enumeration;
@@ -8,12 +8,12 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.joniks.lotalty.api.entity.AuditLog;
-import com.joniks.lotalty.api.logger.DebugManager;
-import com.joniks.lotalty.api.repository.AuditLogRepository;
-import com.joniks.lotalty.api.utility.JSONConverter;
-import com.joniks.lotalty.api.utility.SessionUtility;
-import com.joniks.lotalty.api.utility.StackTraceUtility;
+import com.joniks.loyalty.api.entity.AuditLog;
+import com.joniks.loyalty.api.logger.DebugManager;
+import com.joniks.loyalty.api.repository.AuditLogRepository;
+import com.joniks.loyalty.api.utility.JSONConverter;
+import com.joniks.loyalty.api.utility.SessionUtility;
+import com.joniks.loyalty.api.utility.StackTraceUtility;
 
 @Component
 public class HTTPRequestLogger {

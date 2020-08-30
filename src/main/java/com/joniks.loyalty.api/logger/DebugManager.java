@@ -1,9 +1,9 @@
-package com.joniks.lotalty.api.logger;
+package com.joniks.loyalty.api.logger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.joniks.lotalty.api.utility.StackTraceUtility;
+import com.joniks.loyalty.api.utility.StackTraceUtility;
 
 /**
  * DebugManager is a wrapper class used for debugging. It makes use of the log4j

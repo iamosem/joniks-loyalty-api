@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.entity;
+package com.joniks.loyalty.api.entity;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -17,8 +17,8 @@ import javax.validation.constraints.NotNull;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.joniks.lotalty.api.utility.JSONConverter;
-import com.joniks.lotalty.api.utility.SessionUtility;
+import com.joniks.loyalty.api.utility.JSONConverter;
+import com.joniks.loyalty.api.utility.SessionUtility;
 
 /**
  * The persistent class for the user database table.

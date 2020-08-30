@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.config;
+package com.joniks.loyalty.api.config;
 
 import org.quartz.Scheduler;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -16,12 +16,12 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
 
-import com.joniks.lotalty.api.interceptors.SessionInterceptor;
+import com.joniks.loyalty.api.interceptors.SessionInterceptor;
 
 @Configuration
-@ComponentScan({ "com.joniks.lotalty.api.controller", "com.joniks.lotalty.api.service", "com.joniks.lotalty.api.aop" })
-@EntityScan("com.joniks.lotalty.api.entity")
-@EnableJpaRepositories(basePackages = { "com.joniks.lotalty.api.repository", "com.joniks.lotalty.api.repository.custom" })
+@ComponentScan({ "com.joniks.loyalty.api.controller", "com.joniks.loyalty.api.service", "com.joniks.loyalty.api.aop" })
+@EntityScan("com.joniks.loyalty.api.entity")
+@EnableJpaRepositories(basePackages = { "com.joniks.loyalty.api.repository", "com.joniks.loyalty.api.repository.custom" })
 public class BeanConfiguration extends WebMvcConfigurerAdapter {
 
 	// @Bean

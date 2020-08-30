@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.constants;
+package com.joniks.loyalty.api.constants;
 
 import java.io.File;
 import java.nio.file.Paths;

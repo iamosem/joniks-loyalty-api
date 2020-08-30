@@ -1,12 +1,12 @@
-package com.joniks.lotalty.api.utility;
+package com.joniks.loyalty.api.utility;
 
 import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.joniks.lotalty.api.entity.User;
-import com.joniks.lotalty.api.repository.UserRepository;
+import com.joniks.loyalty.api.entity.User;
+import com.joniks.loyalty.api.repository.UserRepository;
 
 public class SessionUtility {
 

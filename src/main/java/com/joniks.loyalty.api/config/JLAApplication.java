@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.config;
+package com.joniks.loyalty.api.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

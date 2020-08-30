@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.model;
+package com.joniks.loyalty.api.model;
 
 import java.util.Collection;
 import java.util.List;

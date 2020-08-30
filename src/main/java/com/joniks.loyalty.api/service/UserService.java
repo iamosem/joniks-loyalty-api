@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.service;
+package com.joniks.loyalty.api.service;
 
 import java.util.Date;
 import java.util.List;
@@ -10,12 +10,12 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.joniks.lotalty.api.entity.User;
-import com.joniks.lotalty.api.model.ListResult;
-import com.joniks.lotalty.api.model.TransactionResult;
-import com.joniks.lotalty.api.repository.UserRepository;
-import com.joniks.lotalty.api.utility.CommonUtility;
-import com.joniks.lotalty.api.utility.SessionUtility;
+import com.joniks.loyalty.api.entity.User;
+import com.joniks.loyalty.api.model.ListResult;
+import com.joniks.loyalty.api.model.TransactionResult;
+import com.joniks.loyalty.api.repository.UserRepository;
+import com.joniks.loyalty.api.utility.CommonUtility;
+import com.joniks.loyalty.api.utility.SessionUtility;
 
 @Service("userService")
 public class UserService {
@@ -59,6 +59,7 @@ public class UserService {
 			User insertedUser = userRepository.saveAndFlush(user);
 			if (insertedUser != null) {
 				result.setMessage("Successfully inserted '" + user.getUsername() + "'.");
+				result.setObj(insertedUser);
 				result.setSuccess(true);
 			} else {
 				result.setMessage("Insertion of  '" + user.getUsername() + "' failed.");

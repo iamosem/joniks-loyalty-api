@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.model.params;
+package com.joniks.loyalty.api.model.params;
 
 public class PaginationParams {
 

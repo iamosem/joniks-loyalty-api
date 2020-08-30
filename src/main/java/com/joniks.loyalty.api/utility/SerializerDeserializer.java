@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.utility;
+package com.joniks.loyalty.api.utility;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -11,7 +11,7 @@ import java.util.Random;
 import org.apache.axis.encoding.Base64;
 import org.apache.log4j.Logger;
 
-import com.joniks.lotalty.api.config.PDFGenerator;
+import com.joniks.loyalty.api.config.PDFGenerator;
 
 public class SerializerDeserializer {
 	final static Logger logger = Logger.getLogger(SerializerDeserializer.class);

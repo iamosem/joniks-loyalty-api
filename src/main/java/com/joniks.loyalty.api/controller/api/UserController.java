@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.controller.api;
+package com.joniks.loyalty.api.controller.api;
 
 import java.util.List;
 import java.util.UUID;
@@ -19,18 +19,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.joniks.lotalty.api.aop.HTTPRequestLogger;
-import com.joniks.lotalty.api.constants.JLAConstants;
-import com.joniks.lotalty.api.entity.User;
-import com.joniks.lotalty.api.model.ListResult;
-import com.joniks.lotalty.api.model.TransactionResult;
-import com.joniks.lotalty.api.service.UserService;
-import com.joniks.lotalty.api.utility.CommonUtility;
+import com.joniks.loyalty.api.aop.HTTPRequestLogger;
+import com.joniks.loyalty.api.constants.JLAConstants;
+import com.joniks.loyalty.api.entity.User;
+import com.joniks.loyalty.api.model.ListResult;
+import com.joniks.loyalty.api.model.TransactionResult;
+import com.joniks.loyalty.api.service.UserService;
+import com.joniks.loyalty.api.utility.CommonUtility;
+import com.joniks.loyalty.api.model.params.SocialUserParams;
+
+import com.joniks.loyalty.api.logger.DebugManager;
 
 @CrossOrigin
 @RestController(value = "userController")
 @RequestMapping(value = "/user")
 public class UserController {
+	private final DebugManager logger = DebugManager.getInstance(UserController.class);
 
 	@Autowired
 	private UserService userService;
@@ -167,6 +171,37 @@ public class UserController {
 		if (loggedInUser != null)
 			return loggedInUser;
 		return null;
+	}
+
+	@RequestMapping(method = RequestMethod.POST, value = "/fb/info")
+	public User getUserInfo(@RequestBody SocialUserParams socialUserParams, HttpServletRequest request, HttpServletResponse response) {
+
+		httpLogger.logHttpRequest(request, socialUserParams);
+		User user = null;
+		try {
+			user = userService.getUserByUsername(socialUserParams.getId());
+			if (CommonUtility.isObjectNull(user)) {
+				user = new User();
+				user.setUsername(socialUserParams.getId());
+				user.setEmail(socialUserParams.getEmail());
+				user.setFirstName(socialUserParams.getFirstName());
+				user.setLastName(socialUserParams.getLastName());
+				user.setPassword(socialUserParams.getId());
+
+				TransactionResult result = userService.insertUser(user, request);
+				if (!result.isSuccess()) {
+					response.addHeader(JLAConstants.APP_ALERT_TYPE, JLAConstants.APP_ALERT_TYPE_DANGER);
+				} else {
+					response.addHeader(JLAConstants.APP_ALERT_TYPE, JLAConstants.APP_ALERT_TYPE_SUCCESS);
+					user = (User) result.getObj();
+				}
+				response.addHeader(JLAConstants.APP_ALERT_MESSAGE, result.getMessage());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return user;
 	}
 
 	@RequestMapping(method = RequestMethod.DELETE, value = "/{id}")

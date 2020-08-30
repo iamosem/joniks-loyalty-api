@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.utility;
+package com.joniks.loyalty.api.utility;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

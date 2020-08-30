@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.config;
+package com.joniks.loyalty.api.config;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
@@ -23,8 +23,8 @@ import com.itextpdf.text.pdf.BarcodeQRCode;
 import com.itextpdf.text.pdf.BaseFont;
 import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfWriter;
-import com.joniks.lotalty.api.constants.JLAConstants;
-import com.joniks.lotalty.api.utility.DateUtility;
+import com.joniks.loyalty.api.constants.JLAConstants;
+import com.joniks.loyalty.api.utility.DateUtility;
 
 public class PDFGenerator extends SpringBootServletInitializer {
 

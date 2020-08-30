@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.entity;
+package com.joniks.loyalty.api.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

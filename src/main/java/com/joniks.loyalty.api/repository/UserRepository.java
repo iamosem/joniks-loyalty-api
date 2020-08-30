@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.repository;
+package com.joniks.loyalty.api.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -6,8 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.joniks.lotalty.api.entity.User;
-import com.joniks.lotalty.api.repository.custom.UserRepositoryCustom;
+import com.joniks.loyalty.api.entity.User;
+import com.joniks.loyalty.api.repository.custom.UserRepositoryCustom;
 
 @Repository("userRepository")
 public interface UserRepository extends JpaRepository<User, Integer>, UserRepositoryCustom {

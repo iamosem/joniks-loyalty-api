@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.utility;
+package com.joniks.loyalty.api.utility;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 
 import org.springframework.util.StringUtils;
 
-import com.joniks.lotalty.api.entity.User;
+import com.joniks.loyalty.api.entity.User;
 
 public class ReflectionUtility {
 

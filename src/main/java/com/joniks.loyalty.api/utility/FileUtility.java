@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.utility;
+package com.joniks.loyalty.api.utility;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -11,7 +11,7 @@ import java.util.zip.ZipOutputStream;
 
 import javax.servlet.ServletOutputStream;
 
-import com.joniks.lotalty.api.logger.DebugManager;
+import com.joniks.loyalty.api.logger.DebugManager;
 
 public class FileUtility {
 

@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.utility;
+package com.joniks.loyalty.api.utility;
 
 import java.text.DateFormat;
 import java.text.Format;
@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 
-import com.joniks.lotalty.api.constants.JLAConstants;
+import com.joniks.loyalty.api.constants.JLAConstants;
 
 public class DateUtility {
 	public final static String[] DATE_FORMATS = new String[] { "M/d/yyyy hh:mm:ss a", "MM/dd/yy" };

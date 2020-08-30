@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.interceptors;
+package com.joniks.loyalty.api.interceptors;
 
 import java.net.InetAddress;
 
@@ -9,8 +9,8 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
-import com.joniks.lotalty.api.constants.JLAConstants;
-import com.joniks.lotalty.api.logger.DebugManager;
+import com.joniks.loyalty.api.constants.JLAConstants;
+import com.joniks.loyalty.api.logger.DebugManager;
 
 public class SessionInterceptor extends HandlerInterceptorAdapter {
 
@@ -24,7 +24,7 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 
 		// CORS [start]
 		// response.setHeader("Access-Control-Allow-Origin", "http://" + getCurrentHost());
-		response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
+		response.setHeader("Access-Control-Allow-Origin", "https://localhost:4200");
 		response.setHeader("Access-Control-Allow-Methods", "POST, PUT, GET, OPTIONS, DELETE");
 		response.setHeader("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With,observe, SESSION_TOKEN");
 		response.setHeader("Access-Control-Max-Age", "3600");
@@ -32,7 +32,7 @@ public class SessionInterceptor extends HandlerInterceptorAdapter {
 		response.setHeader("Access-Control-Expose-Headers", JLAConstants.VALUE_EXPOSE_HEADERS);
 		// CORS [end]
 
-		if (request.getMethod().equals("OPTIONS") || request.getServletPath().equals("/user/authenticate") || request.getServletPath().equals("/user/logout") || request.getServletPath().startsWith("/mirror") || request.getServletPath().startsWith("/certificate")) {
+		if (request.getMethod().equals("OPTIONS") || request.getServletPath().equals("/user/fb/info") || request.getServletPath().equals("/user/authenticate") || request.getServletPath().equals("/user/logout") || request.getServletPath().startsWith("/mirror") || request.getServletPath().startsWith("/certificate")) {
 			return true;
 		}
 

@@ -1,4 +1,4 @@
-package com.joniks.lotalty.api.logger;
+package com.joniks.loyalty.api.logger;
 
 import org.hibernate.engine.jdbc.internal.BasicFormatterImpl;
 import org.hibernate.engine.jdbc.internal.Formatter;

@@ -1,8 +1,8 @@
-package com.joniks.lotalty.api.repository.custom;
+package com.joniks.loyalty.api.repository.custom;
 
 import java.util.List;
 
-import com.joniks.lotalty.api.entity.User;
+import com.joniks.loyalty.api.entity.User;
 
 public interface UserRepositoryCustom {
 
